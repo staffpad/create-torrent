@@ -91,5 +91,6 @@
   },
   "release": {
     "extends": "@webtorrent/semantic-release-config"
-  }
+  },
+  "typings": "index.d.ts"
 }

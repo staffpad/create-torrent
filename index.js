@@ -152,9 +152,9 @@ function _parseInput (input, opts, cb) {
 
   const numPaths = input.reduce((sum, item) => sum + Number(typeof item === 'string'), 0)
 
-  let isSingleFileTorrent = (input.length === 1)
+  let isSingleFileTorrent = (input.length === 1) && !opts.keepDirStructure
 
-  if (input.length === 1 && typeof input[0] === 'string') {
+  if (isSingleFileTorrent && typeof input[0] === 'string') {
     if (typeof getFiles !== 'function') {
       throw new Error('filesystem paths do not work in the browser')
     }
