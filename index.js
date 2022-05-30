@@ -152,7 +152,7 @@ function _parseInput (input, opts, cb) {
 
   const numPaths = input.reduce((sum, item) => sum + Number(typeof item === 'string'), 0)
 
-  let isSingleFileTorrent = (input.length === 1) && !opts.keepDirStructure
+  let isSingleFileTorrent = (input.length === 1) && !opts.keepDirStructureForSingleFileTorrents
 
   if (isSingleFileTorrent && typeof input[0] === 'string') {
     if (typeof getFiles !== 'function') {
