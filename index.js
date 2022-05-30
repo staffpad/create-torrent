@@ -39,6 +39,7 @@ const announceList = [
  * @param  {Array.<string>=} opts.urlList
  * @param  {Object=} opts.info
  * @param  {Function} opts.onProgress
+ * @param  {boolean|number=} opts.keepDirStructureForSingleFileTorrents
  * @param  {function} cb
  * @return {Buffer} buffer of .torrent file data
  */
@@ -346,7 +347,7 @@ function onFiles (files, opts, cb) {
         delete file.getStream
       })
 
-      if (opts.singleFileTorrent) {
+      if (opts.singleFileTorrent && !opts.keepDirStructureForSingleFileTorrents) {
         torrent.info.length = torrentLength
       } else {
         torrent.info.files = files
