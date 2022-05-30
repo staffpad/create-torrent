@@ -1,5 +1,5 @@
 {
-  "name": "create-torrent",
+  "name": "@staffpad/create-torrent",
   "description": "Create .torrent files",
   "version": "5.0.2",
   "author": {
@@ -59,10 +59,7 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/webtorrent/create-torrent.git"
-  },
+  "repository": "git@github.com:staffpad/create-torrent.git",
   "scripts": {
     "test": "standard && tape test/*.js"
   },
